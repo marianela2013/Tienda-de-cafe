@@ -3,9 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi página web</title>
+    <title>Coffee Paradise</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background:#f5f5f5;
+            color:#333;
+        }
+
+        header{
+            background:linear-gradient(90deg,#3e2723,#5d4037);
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        header h1{
+            font-size:45px;
+        }
+
+        nav{
+            margin-top:15px;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:0 15px;
+            font-size:18px;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#ffcc80;
+        }
+
+        .hero{
+            background:url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1600&auto=format&fit=crop') center/cover;
+            height:500px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            color:white;
+            text-shadow:2px 2px 8px black;
+        }
+
+        .hero h2{
+            font-size:60px;
+        }
+
+        .hero p{
+            font-size:22px;
+            margin-top:10px;
+        }
+
+        .btn{
+            margin-top:20px;
+            background:#6d4c41;
+            color:white;
+            padding:12px 25px;
+            border:none;
+            border-radius:10px;
+            font-size:18px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#8d6e63;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            padding:50px 0;
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:40px;
+            font-size:40px;
+            color:#4e342e;
+        }
+
+        .productos{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:white;
+            border-radius:15px;
+            overflow:hidden;
+            box-shadow:0 4px 12px rgba(0,0,0,0.2);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+        }
+
+        .card img{
+            width:100%;
+            height:250px;
+            object-fit:cover;
+        }
+
+        .card-content{
+            padding:20px;
+            text-align:center;
+        }
+
+        .card-content h3{
+            margin-bottom:10px;
+            color:#5d4037;
+        }
+
+        .precio{
+            font-size:24px;
+            color:#6d4c41;
+            margin:15px 0;
+            font-weight:bold;
+        }
+
+        button{
+            background:#5d4037;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            border-radius:8px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#8d6e63;
+        }
+
+        .sobre{
+            background:white;
+            padding:50px;
+            border-radius:20px;
+            margin-top:40px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.1);
+            text-align:center;
+        }
+
+        .sobre p{
+            margin-top:20px;
+            line-height:1.8;
+            font-size:18px;
+        }
+
+        footer{
+            background:#3e2723;
+            color:white;
+            text-align:center;
+            padding:25px;
+            margin-top:50px;
+        }
+
+    </style>
 </head>
+
 <body>
-  
+
+<header>
+    <h1>☕ Coffee Paradise</h1>
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Promociones</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>El mejor café del mundo</h2>
+    <p>Disfruta sabores únicos y experiencias inolvidables</p>
+    <button class="btn">Comprar Ahora</button>
+</section>
+
+<div class="container">
+
+    <h2>Nuestros Productos</h2>
+
+    <div class="productos">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1000&auto=format&fit=crop">
+            <div class="card-content">
+                <h3>Espresso</h3>
+                <p>Café intenso y aromático.</p>
+                <div class="precio">$3.50</div>
+                <button>Agregar</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1000&auto=format&fit=crop">
+            <div class="card-content">
+                <h3>Capuccino</h3>
+                <p>Espuma cremosa y sabor perfecto.</p>
+                <div class="precio">$4.00</div>
+                <button>Agregar</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=1000&auto=format&fit=crop">
+            <div class="card-content">
+                <h3>Latte</h3>
+                <p>Suave mezcla de leche y café.</p>
+                <div class="precio">$4.50</div>
+                <button>Agregar</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1000&auto=format&fit=crop">
+            <div class="card-content">
+                <h3>Mocaccino</h3>
+                <p>Delicioso café con chocolate.</p>
+                <div class="precio">$5.00</div>
+                <button>Agregar</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=1000&auto=format&fit=crop">
+            <div class="card-content">
+                <h3>Americano</h3>
+                <p>Clásico café suave y elegante.</p>
+                <div class="precio">$3.00</div>
+                <button>Agregar</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1522992319-0365e5f11656?q=80&w=1000&auto=format&fit=crop">
+            <div class="card-content">
+                <h3>Frappé</h3>
+                <p>Café frío refrescante.</p>
+                <div class="precio">$6.00</div>
+                <button>Agregar</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?q=80&w=1000&auto=format&fit=crop">
+            <div class="card-content">
+                <h3>Café Bombón</h3>
+                <p>Mezcla dulce y deliciosa.</p>
+                <div class="precio">$4.20</div>
+                <button>Agregar</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1000&auto=format&fit=crop">
+            <div class="card-content">
+                <h3>Cold Brew</h3>
+                <p>Café frío artesanal premium.</p>
+                <div class="precio">$5.50</div>
+                <button>Agregar</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="sobre">
+        <h2>Sobre Nosotros</h2>
+
+        <p>
+            En Coffee Paradise ofrecemos las mejores variedades de café artesanal,
+            preparadas con granos seleccionados de alta calidad. Nuestro objetivo
+            es brindar una experiencia única para todos los amantes del café,
+            combinando tradición, sabor y pasión en cada taza.
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Coffee Paradise | Todos los derechos reservados</p>
+</footer>
+
 </body>
 </html>
